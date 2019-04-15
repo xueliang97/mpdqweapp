@@ -1,0 +1,4 @@
+<!--pages/join/join.wxml-->
+<view>
+  hello world || {{msg}}
+</view>

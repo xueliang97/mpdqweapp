@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wxf1ac9c17cddf3f4b",
+	"appid": "wx325043547bd85585",
 	"projectname": "miniprogram-test-1",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -37,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -45,6 +47,19 @@
 					"pathName": "pages/logs/logs",
 					"query": "name=ranxianyuan",
 					"scene": 1001
+				},
+				{
+					"id": -1,
+					"name": "join",
+					"pathName": "pages/join/join",
+					"query": "name=ranxianyuan",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"scene": null
 				}
 			]
 		}

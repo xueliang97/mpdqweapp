@@ -1,0 +1,7 @@
+<!-- header start -->
+    <view class="user-header">
+        <image class="user-img" src="/images/bulb.png">
+        </image>
+         <text>照明</text>
+    </view>
+   
