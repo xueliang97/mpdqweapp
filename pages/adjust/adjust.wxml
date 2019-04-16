@@ -1,2 +1,31 @@
-<!--pages/adjust/adjust.wxml-->
-<text>pages/adjust/adjust.wxml</text>
+<view class="pro pro_switch clearfix">
+  <text class="switch_tilte">开关灯</text>
+  <view class="switch_box">
+    <i-cell title="自定义内容">
+        <i-switch value="{{switchBtn}}" size="large" bind:change="onChange" slot="footer">
+            <view slot="open">ON</view>
+            <view slot="close">OFF</view>
+        </i-switch>
+    </i-cell>
+  </view>
+</view>
+
+<view class="pro pro_circular clearfix">
+  <text class="circular_title">亮度模式</text>
+  <view class="circular_box">
+    <view class="{{itemClass}}" data-lighteness="1" bindtap="ligth"></view>
+    <view class="{{itemClass}}" data-lighteness="2" bindtap="ligth"></view>
+  </view>
+</view>
+
+<view class="pro clearfix">
+  <text class="title">自主调光</text>
+  <view class="slide_box">
+    <view class="section section_gap">
+      <view class="body-view">
+        <slider class="line" bindchange="slider4change" min="0" max="100" backgroundColor="#fff" activeColor="#fff" show-value block-size="15" block-color="{{blockColor}}" value="{{sliderVal}}" disabled="{{!switchBtn}}"/>
+        <view class="slider"><view class="{{slideClass}}"></view></view>
+      </view>
+    </view>
+  </view>
+</view>

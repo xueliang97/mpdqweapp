@@ -9,6 +9,10 @@ Page({
     videosList: []
   },
 
+  adjustBulb: function (e) {
+    wx.navigateTo({ url: '/pages/adjust/adjust', });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

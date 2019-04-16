@@ -2,6 +2,6 @@
     <view class="user-header">
         <image class="user-img" src="/images/bulb.png">
         </image>
-         <text>照明</text>
+        <button bindtap='adjustBulb'>照明</button>
     </view>
    

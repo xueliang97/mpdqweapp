@@ -1,66 +1,38 @@
 // pages/adjust/adjust.js
+//获取应用实例
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    switchBtn: true,
+    sliderVal: 80,
+    itemClass: 'circular',
+    slideClass: 's_line',
+    blockColor: '#507cd8'
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
+  onChange(event) {
+    const detail = event.detail;
+    this.setData({
+      'switchBtn': detail.value
+    })
+    if (detail.value) {
+      this.setData({ itemClass: 'circular', slideClass: 's_line', sliderVal: 80, blockColor: '#507cd8' })
+    } else {
+      this.setData({ itemClass: 'circular_active', slideClass: 's_line_active', sliderVal: 0, blockColor: '#999' })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  ligth(e) {
+    if (this.data.switchBtn) {
+      if (e.currentTarget.dataset.lighteness == 1) {
+        this.setData({ sliderVal: 30 })
+      } else {
+        this.setData({ sliderVal: 75 })
+      }
+    }
   }
 })

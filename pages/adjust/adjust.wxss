@@ -1,1 +1,122 @@
 /* pages/adjust/adjust.wxss */
+.pro {
+  position: relative;
+  height: 60px;
+  margin: 0 30rpx;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 10px;
+  padding: 0 10rpx;
+}
+
+.pro_switch {
+  height: 50px;
+}
+
+.pro_circular {
+  height: 55px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.title {
+  position: absolute;
+  margin: 0 0rpx 0 15px;
+  line-height: 60px;
+  color: #555;
+  font-size: 29rpx;
+}
+
+.switch_tilte {
+  position: absolute;
+  margin: 0 0rpx 0 15px;
+  line-height: 50px;
+  color: #555;
+  font-size: 29rpx;
+}
+
+.circular_title {
+  position: absolute;
+  margin: 0 0rpx 0 15px;
+  line-height: 55px;
+  color: #555;
+  font-size: 29rpx;
+}
+
+.switch_box {
+  position: relative;
+  float: right;
+  margin: 10px 10px 0 0;
+}
+
+.circular {
+  width: 20px;
+  height: 20px;
+  background: #49dc50;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #999;
+  border: 3px solid #fff;
+}
+
+.circular:last-child {
+  background: #f89900;
+  margin-left: 10px;
+}
+
+.circular_active {
+  width: 20px;
+  height: 20px;
+  background: #999;
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #999;
+  border: 3px solid #fff;
+}
+
+.circular_active:last-child {
+  margin-left: 10px;
+}
+
+.circular_box {
+  float: right;
+  margin: 15px 10px 0 0;
+}
+
+.slide_box {
+  position: relative;
+  margin-left: 170rpx;
+  margin-top: 22px;
+}
+
+.slider {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  width: 90%;
+  box-sizing: border-box;
+  padding-right: 33px;
+  transform: translate(-50%, -50%);
+}
+
+.line {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.s_line {
+  width: 100%;
+  height: 15rpx;
+  border-radius: 10rpx;
+  background: -webkit-linear-gradient(left, #49dc50, #f89900); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #49dc50, #f89900); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #49dc50, #f89900); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #49dc50, #f89900); /* 标准的语法（必须放在最后） */
+}
+
+.s_line_active {
+  width: 100%;
+  height: 15rpx;
+  border-radius: 10rpx;
+  background: #999;
+}
