@@ -3,7 +3,9 @@
     <!-- header start -->
     <view class="user-header">
         <view  class="user-img">
-            <open-data type="userAvatarUrl" class="user-avatar" ></open-data>
+            <open-data type="userAvatarUrl"  class="user-avatar"></open-data>
+        </view>
+        <view style="display:flex; justify-content:center; align-items:center;margin:20rpx;">
             <open-data type="userNickName" class="user-nickname"></open-data>
         </view>
     </view>
