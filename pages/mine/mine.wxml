@@ -2,14 +2,10 @@
 <view>
     <!-- header start -->
     <view class="user-header">
-        <view class="user-img">
+        <view  class="user-img">
             <open-data type="userAvatarUrl" class="user-avatar" ></open-data>
             <open-data type="userNickName" class="user-nickname"></open-data>
         </view>
-                <button class='login-btn' open-type='getUserInfo' type='primary'      bindgetuserinfo='getMyUserInfo' >
-           微信授权登录
-          </button>
-
     </view>
     <!-- / header end -->
 

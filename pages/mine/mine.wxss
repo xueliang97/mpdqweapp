@@ -13,7 +13,7 @@
     margin: auto;
     text-align: center;
     background-color: rgb(255,255,255);
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 1rpx 4rpx 5rpx #5b5b5b;   
 }
 
