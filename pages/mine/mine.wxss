@@ -5,7 +5,7 @@
     margin-bottom: 20rpx;
     padding-top: 75rpx;
     box-sizing: border-box;
-    background: linear-gradient(to top left,#e282b0,#bcbcbc);
+    background: linear-gradient(to top left,#bcbcbc,#bcbcbc);
 }
 .user-img {
     width: 200rpx;

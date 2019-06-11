@@ -1,29 +1,45 @@
 <!--index.wxml-->
-<view class='slides'>
-  <swiper autoplay indicator-dots circular>
-    <block wx:for="{{imgUrls}}" >
-      <swiper-item>
-        <image  mode="widthFix" src="{{item}}" class="slide-image" />
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
-<!-- 首页导航-->
-
 <view >
     <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
-        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">客厅</view>
-        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">主卧</view>
-        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">次卧</view>
-        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">餐厅</view>
-        <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">厨房</view>
-        <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">书房</view>
-        <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">卫生间</view>
-        <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">杂物间</view>
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">大门</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">走廊</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">花园</view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">前厅</view>
+        <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">后院</view>
+        <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">地下室</view>
     </scroll-view>
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
-     style="height:{{winHeight}}rpx">
-        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}">
+
+    <!-- 轮播图 -->
+      <swiper autoplay indicator-dots circular class='swiper-image'>
+        <block wx:for="{{imgUrls}}" >
+          <swiper-item>
+            <image  mode="widthFix" src="{{item.url}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+
+    <!-- 列表显示设备 -->
+    <view>
+    <view class="container">
+        <scroll-view style='height:{{height}}px;' scroll-y='{{scrollY}}' class='msg-list' bindscroll = 'onScroll'>
+          <view wx:for="{{msgList}}" wx:key="id"  class='msg-item' animation='{{item.wrapAnimation}}'> 
+            <view id='{{item.id}}' class='msg' animation='{{item.animation}}' bindtouchstart='ontouchstart' bindtouchmove='ontouchmove' bindtouchend='ontouchend' bindtap="bulbClickEvent">
+                <image class='header-img' src="{{item.headerImg}}" ></image>
+                <text class='user-name'>{{item.userName}}</text>
+                <text class='msg-text'>{{item.msgText}}</text>
+            </view>
+            <view class='msg-menu'>
+                <view id='{{item.id}}' class='menu-delete' bindtap='onDeleteMsgTap' bindlongtap='onDeleteMsgLongtap'>
+                    删除
+                </view>
+              </view>
+            </view>
+        </scroll-view>
+      </view>
+
+
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2,3,4,5]}}">
             <scroll-view scroll-y="true" class="scoll-h" >
                     <view class="item-ans">  
                         <button bindtap='addDevice'  class="addBtn">添加设备</button> >
@@ -31,7 +47,25 @@
             </scroll-view>
         </swiper-item>
     </swiper>
+    </view>
+
 </view>
+<!-- <view class='slides'>
+  <swiper autoplay indicator-dots circular>
+    <block wx:for="{{imgUrls}}" >
+      <swiper-item>
+        <image  mode="widthFix" src="{{item.url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view> -->
+<!-- 首页导航-->
+
+<!-- 列表显示添加的设备 -->
+
+
+
+
 
 
 

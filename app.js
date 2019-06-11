@@ -1,10 +1,17 @@
-import requestUrl from './utils/util.js'
+// import requestUrl from './utils/util.js'
 App({
 
+  data: {
+    deviceInfo: {}
+  },
+  onLaunch: function () {
+    this.data.deviceInfo = wx.getSystemInfoSync();
+    console.log(this.data.deviceInfo);
+  },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
-  onLaunch: function () {   /*
+  /*onLaunch: function () {
     // 登录;用户打开小程序时，会调用wx.login获取code，将code发送到后台获取openid。后台保存opendi并返回用户信息
     //（首次登录信息为空，非首次登录信息存在）
     wx.login({
@@ -27,9 +34,9 @@ App({
             })
         }
       }
-    })  */
+    })  
     
-  },
+  },*/
 
   /**
    * 当小程序启动，或从后台进入前台显示，会触发 onShow

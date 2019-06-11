@@ -1,7 +1,19 @@
 <!-- header start -->
-    <view class="user-header">
-        <image class="user-img" src="/images/bulb.png">
-        </image>
-        <button bindtap='adjustBulb'>照明</button>
+<view class='case-page'>
+  <view class='list-masonry'>
+    <view class='item-masonry' wx:for="{{note}}">
+      <image src='{{item.url}}' mode='widthFix'  data-location="{{item.location}}" bindtap="ballClickEvent" ></image>
+      <text>{{item.title}}</text>
     </view>
-   
+      <i-dialog id="modal"
+                  title="添加确认"
+                  cancelText="取消"
+                  confirmText="确认"
+                  bind:cancelEvent="_cancelEvent"
+                  bind:confirmEvent="_confirmEventFirst">
+            <view class='modal-body'>
+              <view>确定添加设备{{note.title}} 吗？</view>
+            </view>
+      </i-dialog>
+  </view>
+</view>

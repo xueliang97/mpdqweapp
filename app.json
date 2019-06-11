@@ -6,12 +6,14 @@
     "pages/login/login",
     "pages/mine/mine",
     "pages/add/add",
+    "pages/join/join",
     "pages/adjust/adjust",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/logs/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#d4237a",
+    "navigationBarBackgroundColor": "#999999",
     "navigationBarTitleText": "明鹏智能",
     "navigationBarTextStyle": "white"
   },

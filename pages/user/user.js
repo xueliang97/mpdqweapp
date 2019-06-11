@@ -1,5 +1,5 @@
 // pages/user/user.js
-var app = getApp();
+// var app = getApp();
 Page({
 
   /**
